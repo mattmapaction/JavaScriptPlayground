@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title></title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+
+    <script>
+        var rootLocation = location.pathname.split('/').slice(0, -1).join('/');
+     
+       
+
+        console.log(rootLocation + '/app/')
+
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true,
+            packages: [
+              {
+                  name: 'app',
+                  location: rootLocation +'/app/'
+              }
+            ]
+        };
+    </script>
+    <script src='http://js.arcgis.com/3.14/'></script>
+    <script src='app.js'></script>
+</head>
+<body>
+    <div id='app'></div>
+
+</body>
+</html>
